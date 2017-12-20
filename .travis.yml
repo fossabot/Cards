@@ -1,0 +1,11 @@
+language: swift
+
+branches:
+ only:
+ - master
+
+xcode_project: Cards.xcodeproj
+xcode_scheme: Cards
+osx_image: xcode9
+xcode_sdk: iphonesimulator11.0
+ 
