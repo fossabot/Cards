@@ -99,6 +99,8 @@ class ViewController: UIViewController {
 }
 ```
 
+Checkout [DanceClass](https://github.com/rob-nash/DanceClass) for an example implementation.
+
 ## Installing
 
 For the latest release, select the [release](https://github.com/rob-nash/cards/releases) tab.
