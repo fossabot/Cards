@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-    <a href="https://travis-ci.org/rob-nash/cards">
-        <img src="https://travis-ci.org/rob-nash/cards.svg?branch=master" alt="Build" />
+    <a href="https://travis-ci.org/rob-nash/Cards">
+        <img src="https://travis-ci.org/rob-nash/Cards.svg?branch=master" alt="Build" />
     </a>
     <a href="https://twitter.com/nashytitz">
         <img src="https://img.shields.io/badge/contact-@nashytitz-blue.svg?style=flat" alt="Twitter: @nashytitz" />
@@ -22,7 +22,6 @@ Given a data source like the following.
 ```swift
 class DanceClass {
     let name: String
-    let type: ClassType
     let address1: String
     let address2: String
     let town: String
