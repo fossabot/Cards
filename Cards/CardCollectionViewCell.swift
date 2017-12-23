@@ -10,37 +10,68 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
   
-  private var viewController: UIViewController?
+  private let blockerView: UIView
   
-  /// After calling this function, add scene as a child view controller.
-  func configure(withScene scene: UIViewController) {
-    viewController?.view.removeFromSuperview()
-    viewController?.removeFromParentViewController()
-    viewController?.didMove(toParentViewController: nil)
+  typealias TapAction = () -> Void
+  
+  var didTap: TapAction?
+  
+  private var tapGesture: UITapGestureRecognizer!
+  
+  @objc func tappy(_ sender: UITapGestureRecognizer) {
+    didTap?()
+  }
+  
+  override init(frame: CGRect) {
+    blockerView = UIView()
+    super.init(frame: frame)
+    clipsToBounds = true
+    addSubview(blockerView)
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappy(_:)))
+    blockerView.addGestureRecognizer(tapGesture)
+    self.tapGesture = tapGesture
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  func configure(withScene scene: UINavigationController) {
     addSubview(scene.view)
-    viewController = scene
+    bringSubview(toFront: blockerView)
+    if let scrollView = scrollView(on: scene.viewControllers.first!.view) {
+      tapGesture.require(toFail: scrollView.panGestureRecognizer)
+      blockerView.addGestureRecognizer(scrollView.panGestureRecognizer)
+    }
   }
-  
-  private func makePanGestureRecognizer() -> UIPanGestureRecognizer {
-    let selector = #selector(panGestureRecognized(_:))
-    let gesture = UIPanGestureRecognizer(target: self, action: selector)
-    gesture.minimumNumberOfTouches = 1
-    gesture.maximumNumberOfTouches = 1
-    return gesture
+
+  private func scrollView(on view: UIView) -> UIScrollView? {
+    for subview in view.subviews {
+      if subview is UIScrollView {
+        return subview as? UIScrollView
+      }
+    }
+    return nil
   }
-  
-  @objc private func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
-    guard let touchedView = sender.view else { return }
-    let translation: CGPoint = sender.translation(in: self)
-    let x: CGFloat = touchedView.center.x + translation.x
-    let y: CGFloat = touchedView.center.y + translation.y
-    touchedView.center = CGPoint(x: x, y: y)
+
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    for subview in subviews {
+      if subview != blockerView {
+        subview.removeFromSuperview()
+      }
+    }
+    for gesture in blockerView.gestureRecognizers ?? [] {
+      blockerView.removeGestureRecognizer(gesture)
+    }
+    blockerView.addGestureRecognizer(self.tapGesture)
   }
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    clipsToBounds = true
-    viewController?.view.frame = bounds
+    for subview in subviews {
+      subview.frame = bounds
+    }
     layer.cornerRadius = min(bounds.width, bounds.height) / 14.0
   }
 }

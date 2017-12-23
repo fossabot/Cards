@@ -11,16 +11,18 @@ import UIKit
 /// https://bugs.swift.org/browse/SR-6265
 
 public protocol CardableScene: class where Self: UIViewController {
-  associatedtype Model
-  var showsNavigationBar: Bool { get }
-  init(model: Model)
-  var model: Model { get }
+    associatedtype Model
+    var showsNavigationBar: Bool { get }
+    init(model: Model)
+    var model: Model { get }
 }
 
 //public extension CardableScene {
 //
-//  var showsNavigationBar: Bool {
-//    return navigationItem.title != nil
-//  }
+//    /// https://bugs.swift.org/browse/SR-6657
+//
+//    var showsNavigationBar: Bool {
+//      return navigationItem.title != nil
+//    }
 //}
 

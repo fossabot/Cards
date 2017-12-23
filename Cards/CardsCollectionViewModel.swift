@@ -11,7 +11,6 @@ import UIKit
 class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout where T: CardableScene {
   
   private let cards: [Card<T>]
-  var parentViewController: UIViewController?
   
   typealias Selection = (T.Model) -> Void
   
@@ -33,24 +32,25 @@ class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UIColle
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let card: Card = cards[indexPath.item]
-    let cell: CardCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCellID", for: indexPath) as! CardCollectionViewCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCellID", for: indexPath) as! CardCollectionViewCell
+    cell.didTap = { [unowned self] in
+      let scene = (card.scene.viewControllers.first as! T)
+      self.didSelect?(scene.model)
+    }
     cell.configure(withScene: card.scene)
-    parentViewController?.addChildViewController(card.scene)
-    card.scene.didMove(toParentViewController: parentViewController)
     return cell
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let card: Card = cards[indexPath.item]
-    let scene = (card.scene.viewControllers.first as! T)
-    didSelect?(scene.model)
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    /// Cell layout sometimes breaks after rotation
+    cell.layoutIfNeeded()
   }
   
   //MARK: UICollectionViewDelegateFlowLayout
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     var size = collectionView.frame.size
-    size.width = cellWidth(collectionView as UIScrollView)
+    size.width = pageWidth(collectionView as UIScrollView)
     return size
   }
   
@@ -60,17 +60,20 @@ class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UIColle
   
   //MARK: UIScrollViewDelegate
   
-  private var currentPage: Int = 0
-  
-  private func pageWidth(_ scrollView: UIScrollView) -> CGFloat {
-    return cellWidth(scrollView)
-  }
+  private(set) var currentPage: Int = 0
   
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    currentPage = establishCurrentPage(scrollView)
+  }
+  
+  private func establishCurrentPage(_ scrollView: UIScrollView) -> Int {
     let pw = pageWidth(scrollView)
     let a = scrollView.contentOffset.x
     let b = scrollView.contentInset.left
-    currentPage = Int(floor(((a - b) - pw / 2.0) / pw)) + 1;
+    let c = (a - b)
+    let d = c - pw / 2.0
+    let e = d / pw
+    return Int(floor(e)) + 1
   }
   
   /// with thanks to https://stackoverflow.com/a/17230270/1951992
@@ -96,11 +99,20 @@ class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UIColle
     targetContentOffset.pointee.x = (CGFloat(newPage) * pw) - scrollView.contentInset.left
   }
   
-  private func cellWidth(_ scrollView: UIScrollView) -> CGFloat {
-    let width = scrollView.frame.size.width
-    let left: CGFloat = scrollView.adjustedContentInset.left
-    let right: CGFloat = scrollView.adjustedContentInset.right
-    return width - (left + right)
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    if decelerate == false {
+      currentPage = establishCurrentPage(scrollView)
+    }
   }
   
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    currentPage = establishCurrentPage(scrollView)
+  }
+  
+  private func pageWidth(_ scrollView: UIScrollView) -> CGFloat {
+    let width = scrollView.frame.size.width
+    let left: CGFloat = scrollView.contentInset.left
+    let right: CGFloat = scrollView.contentInset.right
+    return width - (left + right)
+  }
 }

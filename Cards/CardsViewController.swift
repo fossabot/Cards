@@ -21,16 +21,16 @@ class CardsViewController<T>: UIViewController where T: CardableScene {
   init(model: CardsCollectionViewModel<T>) {
     self.model = model
     super.init(nibName: nil, bundle: Bundle(for: CardsCollectionView.self))
-    self.model.parentViewController = self
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+    
+  private let collectionView = CardsCollectionView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let collectionView = CardsCollectionView()
     view.addSubview(collectionView)
     collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -38,10 +38,19 @@ class CardsViewController<T>: UIViewController where T: CardableScene {
     collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     collectionView.dataSource = model
     collectionView.delegate = model
-    let inset: CGFloat = view.frame.size.width * 0.2
-    collectionView.contentInset.left = inset / 2.0
-    collectionView.contentInset.right = inset / 2.0
+    collectionView.adjustInsets(parentSize: view.frame.size)
     delegate = presentationController as? CardsViewControllerDelegate
+  }
+    
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    collectionView.adjustInsets(parentSize: size)
+    coordinator.animate(alongsideTransition: { (context) in
+    }) { (context) in
+      let page = self.model.currentPage
+      let indexPath = IndexPath(item: page, section: 0)
+      self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
   }
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

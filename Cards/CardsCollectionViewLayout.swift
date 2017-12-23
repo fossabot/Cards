@@ -28,4 +28,8 @@ class CardsCollectionViewLayout: UICollectionViewFlowLayout {
     return items as? [UICollectionViewLayoutAttributes]
   }
   
+  override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    return true
+  }
+  
 }

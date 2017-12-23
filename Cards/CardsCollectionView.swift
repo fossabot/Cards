@@ -14,6 +14,7 @@ class CardsCollectionView: UICollectionView {
     super.init(frame: .zero, collectionViewLayout: CardsCollectionViewLayout())
     translatesAutoresizingMaskIntoConstraints = false
     clipsToBounds = false
+    decelerationRate = UIScrollViewDecelerationRateFast
     backgroundColor = .clear
     showsVerticalScrollIndicator = false
     showsHorizontalScrollIndicator = false
@@ -24,13 +25,17 @@ class CardsCollectionView: UICollectionView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func adjustInsets(parentSize: CGSize) {
+    let inset: CGFloat = parentSize.width * 0.2
+    contentInset.left = inset / 2.0
+    contentInset.right = inset / 2.0
+  }
+  
   override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
     let hitView = super.hitTest(point, with: event)
     if hitView == self && indexPathForItem(at: point) == nil {
-      /// Outside of card area should dismiss. Superview will delegate the touch.
       return self.superview
     }
     return hitView
   }
-  
 }

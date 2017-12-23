@@ -25,13 +25,13 @@ public class CardsManager<T>: CardViewControllerPresentationControllerDelegate w
     model.didSelect = self.didSelect
     let controller = CardsViewController<T>(model: model)
     controller.modalPresentationStyle = .custom
-    controller.transitioningDelegate = transitionHandler
+    controller.transitioningDelegate = self.transitionHandler
     return controller as UIViewController
   }()
   
   public init(scenes: [T]) {
-    self.cards = scenes.map {
-      return Card<T>(scene: $0)
+    self.cards = scenes.map { scene in
+      return Card<T>(scene: scene)
     }
     self.transitionHandler = CardViewControllerTransitionHandler()
     self.transitionHandler.interactionDelegate = self
