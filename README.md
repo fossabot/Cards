@@ -87,15 +87,7 @@ class DanceClassViewController: UIViewController, CardableScene {
 
     private let danceClass: DanceClass
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let tableView = DanceClassTableView(style: .plain)
-        tableView.dataSource = self
-        view.addSubview(tableView)
-    }
-
-    //MARK: UITableViewDataSource ...
-    // numberOfRows etc
+    /// Implement a table view here
 }
 ```
 
