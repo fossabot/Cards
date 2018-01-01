@@ -62,7 +62,7 @@ class ViewController: UIViewController {
 }
 ```
 
-In the above example `DanceClassViewController` should conform to `CardableScene`. As you can see `DanceClass` is the model for `DanceViewController`, so your `CardableScene` implementation should specify this.
+In the above example `DanceClassViewController` should conform to `CardableScene`. As you can see `DanceClass` is the model for `DanceClassViewController`, so your `CardableScene` implementation should specify this.
 
 ```swift
 import UIKit
