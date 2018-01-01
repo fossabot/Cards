@@ -62,15 +62,13 @@ class ViewController: UIViewController {
 }
 ```
 
-In the above example `DanceClassViewController` should conform to 'CardableScene'. As you can see 'DanceClass' is the model for 'DanceViewController', so your 'CardableScene' implementation should specify this.
+In the above example `DanceClassViewController` should conform to `CardableScene`. As you can see `DanceClass` is the model for `DanceViewController`, so your `CardableScene` implementation should specify this.
 
 ```swift
 import UIKit
 import Cards
 
 class DanceClassViewController: UIViewController, CardableScene {
-    
-    private let danceClass: DanceClass
     
     typealias Model = DanceClass
   
@@ -86,6 +84,8 @@ class DanceClassViewController: UIViewController, CardableScene {
     var model: DanceClass {
       return danceClass
     }
+
+    private let danceClass: DanceClass
     
     override func viewDidLoad() {
         super.viewDidLoad()
