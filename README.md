@@ -29,44 +29,8 @@ class DanceClass {
 }
 ```
 
-Prepare a view controller that conforms to 'CardableScene'.
 
-```swift
-import UIKit
-import Cards
-
-class DanceClassViewController: UIViewController, UITableViewDataSource, CardableScene {
-    
-    private let danceClass: DanceClass
-    
-    typealias Model = DanceClass
-  
-    required init(model: DanceClass) {
-      self.danceClass = model
-      super.init(nibName: nil, bundle: nil)
-    }
-  
-    var showsNavigationBar: Bool {
-      return true
-    }
-  
-    var model: DanceClass {
-      return danceClass
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let tableView = DanceClassTableView(style: .plain)
-        tableView.dataSource = self
-        view.addSubview(tableView)
-    }
-
-    //MARK: UITableViewDataSource ...
-    // etc
-}
-```
-
-Then create an instance of `CardsManager` and keep a strong reference to it.
+Create an instance of `CardsManager` and keep a strong reference to it.
 
 ```swift
 import UIKit
@@ -95,6 +59,43 @@ class ViewController: UIViewController {
   @IBAction private func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
     present(cardsManager.selectionsScene, animated: true, completion: nil)
   }
+}
+```
+
+In the above example `DanceClassViewController` should conform to 'CardableScene'. As you can see 'DanceClass' is the model for 'DanceViewController', so your 'CardableScene' implementation should specify this.
+
+```swift
+import UIKit
+import Cards
+
+class DanceClassViewController: UIViewController, CardableScene {
+    
+    private let danceClass: DanceClass
+    
+    typealias Model = DanceClass
+  
+    required init(model: DanceClass) {
+      self.danceClass = model
+      super.init(nibName: nil, bundle: nil)
+    }
+  
+    var showsNavigationBar: Bool {
+      return true
+    }
+  
+    var model: DanceClass {
+      return danceClass
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tableView = DanceClassTableView(style: .plain)
+        tableView.dataSource = self
+        view.addSubview(tableView)
+    }
+
+    //MARK: UITableViewDataSource ...
+    // numberOfRows etc
 }
 ```
 
