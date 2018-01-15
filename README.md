@@ -13,7 +13,7 @@
 
 A dequing menu of card-shaped view controllers.
 
-<p align="left"><img src="http://i.giphy.com/l0HU6Vh6Z6Ho30BqM.gif" width="259" height="460"/></p>
+<p align="left"><img src="http://i.giphy.com/3ohc18V0x9lylBzwsw.gif" width="259" height="460"/></p>
 
 ## Usage
 
