@@ -91,7 +91,9 @@ class DanceClassViewController: UIViewController, CardableScene {
 }
 ```
 
-Checkout [DanceClass](https://github.com/rob-nash/DanceClass) for an example implementation.
+## Demo
+
+Run the [Carthage](https://github.com/Carthage/Carthage) command `carthage bootstrap`. Then Run the scheme `DanceClass`.
 
 ## Installing
 
