@@ -100,10 +100,3 @@ For the latest release, select the [release](https://github.com/rob-nash/cards/r
 ### Carthage:
 
 Add `github "rob-nash/cards"` to your `Cartfile`.
-
-### Donations.
-<p>If you like this and you want to buy me a drink, use bitcoin.</p>
-
-![Bitcoin Image](Resources/Bitcoin.jpg)
-
-Bitcoin Address: 15Gj4DBTzSujnJrfRZ6ivrR9kDnWXNPvNQ

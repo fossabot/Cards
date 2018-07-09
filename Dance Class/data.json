@@ -1,0 +1,32 @@
+[{
+    "name" : "Rhiwbina Open Dance",
+    "type" : "Open",
+    "address1" : "Kansas Drive",
+    "address2" : "Church Way",
+    "town" : "Seattle",
+    "postcode" : "BS32 7JJ"
+},
+ {
+    "name" : "Newport Fitness",
+    "type" : "Fitness",
+    "address1" : "Fortress Street",
+    "address2" : "Duncanydd",
+    "town" : "Newport",
+    "postcode" : "A22 KWL"
+},
+ {
+    "name" : "Chelsea Dramatics",
+    "type" : "Musical",
+    "address1" : "Excelsior Street",
+    "address2" : "Chimsey",
+    "town" : "Essex",
+    "postcode" : "CL3 2KKL"
+ },
+  {
+    "name" : "Pontprennau Street Dance",
+    "type" : "Squad",
+    "address1" : "Circle Avenue",
+    "address2" : "Kings Cross",
+    "town" : "Chinatown",
+    "postcode" : "ZII 2F2"
+ }]

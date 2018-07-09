@@ -12,13 +12,60 @@
 		50219D841FE3C8F60042D847 /* CardViewControllerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D831FE3C8F60042D847 /* CardViewControllerPresentationController.swift */; };
 		50219D861FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D851FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift */; };
 		50219D881FE3C9850042D847 /* CardViewControllerTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D871FE3C9850042D847 /* CardViewControllerTransitionHandler.swift */; };
+		50492FA720F3C71500D324F6 /* Dequable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA520F3C71500D324F6 /* Dequable.framework */; };
+		50492FA820F3C71500D324F6 /* Dequable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA520F3C71500D324F6 /* Dequable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50492FA920F3C71500D324F6 /* Require.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA620F3C71500D324F6 /* Require.framework */; };
+		50492FAA20F3C71500D324F6 /* Require.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA620F3C71500D324F6 /* Require.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50550AE31FEA339000675714 /* CardableScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50550AE21FEA339000675714 /* CardableScene.swift */; };
 		506DCCAA1FE29CA200B26A80 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DCCA91FE29CA200B26A80 /* CardsViewController.swift */; };
 		506DCCAE1FE29CCA00B26A80 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DCCAD1FE29CCA00B26A80 /* CardCollectionViewCell.swift */; };
 		506DCCB01FE29E2D00B26A80 /* CardsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DCCAF1FE29E2D00B26A80 /* CardsCollectionViewModel.swift */; };
+		5079B6AF20F3C55000E03BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B69D20F3C55000E03BE6 /* AppDelegate.swift */; };
+		5079B6B020F3C55000E03BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5079B69E20F3C55000E03BE6 /* Assets.xcassets */; };
+		5079B6B120F3C55000E03BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */; };
+		5079B6B220F3C55000E03BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A120F3C55000E03BE6 /* Main.storyboard */; };
+		5079B6B320F3C55000E03BE6 /* ColourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A320F3C55000E03BE6 /* ColourManager.swift */; };
+		5079B6B420F3C55000E03BE6 /* DanceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A420F3C55000E03BE6 /* DanceClass.swift */; };
+		5079B6B520F3C55000E03BE6 /* DanceClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */; };
+		5079B6B620F3C55000E03BE6 /* DanceClassTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */; };
+		5079B6B720F3C55000E03BE6 /* DanceClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */; };
+		5079B6B820F3C55000E03BE6 /* DanceClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */; };
+		5079B6B920F3C55000E03BE6 /* DanceClassTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */; };
+		5079B6BA20F3C55000E03BE6 /* DanceClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */; };
+		5079B6BB20F3C55000E03BE6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6AB20F3C55000E03BE6 /* data.json */; };
+		5079B6BC20F3C55000E03BE6 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AC20F3C55000E03BE6 /* FontManager.swift */; };
+		5079B6BE20F3C55000E03BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AE20F3C55000E03BE6 /* ViewController.swift */; };
+		50F0DFA720F3C57700C2C8C0 /* Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE20A41FE28D39001FBF11 /* Cards.framework */; };
+		50F0DFA820F3C57700C2C8C0 /* Cards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE20A41FE28D39001FBF11 /* Cards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50FE20ED1FE29B25001FBF11 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE20EC1FE29B25001FBF11 /* CardsManager.swift */; };
 		50FE20EF1FE29BAE001FBF11 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE20EE1FE29BAE001FBF11 /* Card.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50F0DFA920F3C57700C2C8C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50FE209B1FE28D39001FBF11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50FE20A31FE28D39001FBF11;
+			remoteInfo = Cards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50F0DFAB20F3C57700C2C8C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50F0DFA820F3C57700C2C8C0 /* Cards.framework in Embed Frameworks */,
+				50492FA820F3C71500D324F6 /* Dequable.framework in Embed Frameworks */,
+				50492FAA20F3C71500D324F6 /* Require.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50061B1C1FE2D6D5006C09F7 /* CardsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -26,10 +73,29 @@
 		50219D831FE3C8F60042D847 /* CardViewControllerPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerPresentationController.swift; sourceTree = "<group>"; };
 		50219D851FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		50219D871FE3C9850042D847 /* CardViewControllerTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitionHandler.swift; sourceTree = "<group>"; };
+		50492FA520F3C71500D324F6 /* Dequable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dequable.framework; path = Carthage/Build/iOS/Dequable.framework; sourceTree = "<group>"; };
+		50492FA620F3C71500D324F6 /* Require.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Require.framework; path = Carthage/Build/iOS/Require.framework; sourceTree = "<group>"; };
 		50550AE21FEA339000675714 /* CardableScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardableScene.swift; path = ../../Cards/Cards/CardableScene.swift; sourceTree = "<group>"; };
 		506DCCA91FE29CA200B26A80 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		506DCCAD1FE29CCA00B26A80 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		506DCCAF1FE29E2D00B26A80 /* CardsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewModel.swift; sourceTree = "<group>"; };
+		5079B68A20F3C51500E03BE6 /* DanceClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanceClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5079B69D20F3C55000E03BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5079B69E20F3C55000E03BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5079B6A020F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5079B6A220F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5079B6A320F3C55000E03BE6 /* ColourManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourManager.swift; sourceTree = "<group>"; };
+		5079B6A420F3C55000E03BE6 /* DanceClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClass.swift; sourceTree = "<group>"; };
+		5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassGenerator.swift; sourceTree = "<group>"; };
+		5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableView.swift; sourceTree = "<group>"; };
+		5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableViewCell.swift; sourceTree = "<group>"; };
+		5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanceClassTableViewCell.xib; sourceTree = "<group>"; };
+		5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableViewModel.swift; sourceTree = "<group>"; };
+		5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassViewController.swift; sourceTree = "<group>"; };
+		5079B6AB20F3C55000E03BE6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		5079B6AC20F3C55000E03BE6 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		5079B6AD20F3C55000E03BE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5079B6AE20F3C55000E03BE6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50FE20A41FE28D39001FBF11 /* Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FE20A81FE28D3A001FBF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50FE20EC1FE29B25001FBF11 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
@@ -37,6 +103,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5079B68720F3C51500E03BE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F0DFA720F3C57700C2C8C0 /* Cards.framework in Frameworks */,
+				50492FA720F3C71500D324F6 /* Dequable.framework in Frameworks */,
+				50492FA920F3C71500D324F6 /* Require.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50FE20A01FE28D39001FBF11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,11 +123,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5079B69C20F3C55000E03BE6 /* Dance Class */ = {
+			isa = PBXGroup;
+			children = (
+				5079B69D20F3C55000E03BE6 /* AppDelegate.swift */,
+				5079B69E20F3C55000E03BE6 /* Assets.xcassets */,
+				5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */,
+				5079B6A120F3C55000E03BE6 /* Main.storyboard */,
+				5079B6A320F3C55000E03BE6 /* ColourManager.swift */,
+				5079B6A420F3C55000E03BE6 /* DanceClass.swift */,
+				5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */,
+				5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */,
+				5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */,
+				5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */,
+				5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */,
+				5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */,
+				5079B6AB20F3C55000E03BE6 /* data.json */,
+				5079B6AC20F3C55000E03BE6 /* FontManager.swift */,
+				5079B6AD20F3C55000E03BE6 /* Info.plist */,
+				5079B6AE20F3C55000E03BE6 /* ViewController.swift */,
+			);
+			path = "Dance Class";
+			sourceTree = "<group>";
+		};
 		50FE209A1FE28D39001FBF11 = {
 			isa = PBXGroup;
 			children = (
+				50492FA520F3C71500D324F6 /* Dequable.framework */,
+				50492FA620F3C71500D324F6 /* Require.framework */,
 				50FE20A61FE28D39001FBF11 /* Cards */,
 				50FE20A51FE28D39001FBF11 /* Products */,
+				5079B69C20F3C55000E03BE6 /* Dance Class */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				50FE20A41FE28D39001FBF11 /* Cards.framework */,
+				5079B68A20F3C51500E03BE6 /* DanceClass.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +198,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5079B68920F3C51500E03BE6 /* DanceClass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5079B69B20F3C51500E03BE6 /* Build configuration list for PBXNativeTarget "DanceClass" */;
+			buildPhases = (
+				5079B68620F3C51500E03BE6 /* Sources */,
+				5079B68720F3C51500E03BE6 /* Frameworks */,
+				5079B68820F3C51500E03BE6 /* Resources */,
+				50F0DFAB20F3C57700C2C8C0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50F0DFAA20F3C57700C2C8C0 /* PBXTargetDependency */,
+			);
+			name = DanceClass;
+			productName = DanceClass;
+			productReference = 5079B68A20F3C51500E03BE6 /* DanceClass.app */;
+			productType = "com.apple.product-type.application";
+		};
 		50FE20A31FE28D39001FBF11 /* Cards */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE20B81FE28D3A001FBF11 /* Build configuration list for PBXNativeTarget "Cards" */;
@@ -119,10 +241,14 @@
 		50FE209B1FE28D39001FBF11 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Robert Nash";
 				TargetAttributes = {
+					5079B68920F3C51500E03BE6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					50FE20A31FE28D39001FBF11 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
@@ -136,6 +262,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 50FE209A1FE28D39001FBF11;
 			productRefGroup = 50FE20A51FE28D39001FBF11 /* Products */;
@@ -143,11 +270,24 @@
 			projectRoot = "";
 			targets = (
 				50FE20A31FE28D39001FBF11 /* Cards */,
+				5079B68920F3C51500E03BE6 /* DanceClass */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5079B68820F3C51500E03BE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5079B6B820F3C55000E03BE6 /* DanceClassTableViewCell.xib in Resources */,
+				5079B6B220F3C55000E03BE6 /* Main.storyboard in Resources */,
+				5079B6B020F3C55000E03BE6 /* Assets.xcassets in Resources */,
+				5079B6BB20F3C55000E03BE6 /* data.json in Resources */,
+				5079B6B120F3C55000E03BE6 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50FE20A21FE28D39001FBF11 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +298,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5079B68620F3C51500E03BE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5079B6BE20F3C55000E03BE6 /* ViewController.swift in Sources */,
+				5079B6B520F3C55000E03BE6 /* DanceClassGenerator.swift in Sources */,
+				5079B6BA20F3C55000E03BE6 /* DanceClassViewController.swift in Sources */,
+				5079B6B620F3C55000E03BE6 /* DanceClassTableView.swift in Sources */,
+				5079B6B920F3C55000E03BE6 /* DanceClassTableViewModel.swift in Sources */,
+				5079B6BC20F3C55000E03BE6 /* FontManager.swift in Sources */,
+				5079B6AF20F3C55000E03BE6 /* AppDelegate.swift in Sources */,
+				5079B6B420F3C55000E03BE6 /* DanceClass.swift in Sources */,
+				5079B6B720F3C55000E03BE6 /* DanceClassTableViewCell.swift in Sources */,
+				5079B6B320F3C55000E03BE6 /* ColourManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50FE209F1FE28D39001FBF11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,7 +335,82 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		50F0DFAA20F3C57700C2C8C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50FE20A31FE28D39001FBF11 /* Cards */;
+			targetProxy = 50F0DFA920F3C57700C2C8C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5079B6A020F3C55000E03BE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5079B6A120F3C55000E03BE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5079B6A220F3C55000E03BE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5079B69920F3C51500E03BE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGEF6W7K94;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dance Class/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertnash.DanceClass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5079B69A20F3C51500E03BE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGEF6W7K94;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Dance Class/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertnash.DanceClass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		50FE20B61FE28D3A001FBF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -299,6 +531,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GGEF6W7K94;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -321,6 +554,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GGEF6W7K94;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -338,6 +572,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5079B69B20F3C51500E03BE6 /* Build configuration list for PBXNativeTarget "DanceClass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5079B69920F3C51500E03BE6 /* Debug */,
+				5079B69A20F3C51500E03BE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50FE209E1FE28D39001FBF11 /* Build configuration list for PBXProject "Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
