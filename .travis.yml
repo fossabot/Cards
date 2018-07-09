@@ -6,6 +6,8 @@ branches:
 
 xcode_project: Cards.xcodeproj
 xcode_scheme: Cards
-osx_image: xcode9
-xcode_sdk: iphonesimulator11.0
+osx_image: xcode9.3
+xcode_sdk: iphonesimulator11.3
  
+script: 
+ - xcodebuild -scheme Cards -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3'
