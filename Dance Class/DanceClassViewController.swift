@@ -17,7 +17,7 @@ class DanceClassViewController: UIViewController, CardableScene {
   
     typealias Model = DanceClass
   
-    required init(model: DanceClass) {
+    required init(model: Model) {
       self.tableViewModel = DanceClassTableViewModel(danceClass: model)
       super.init(nibName: nil, bundle: nil)
     }

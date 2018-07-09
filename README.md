@@ -38,21 +38,17 @@ import Cards
 
 class ViewController: UIViewController {
   
-  private lazy var cardsManager: CardsManager<DanceClassViewController> = {
-    let danceClasses: [DanceClass] = DanceClassGenerator.fetchClasses()
-    let scenes: [DanceClassViewController] = danceClasses.map { danceClass in
-      return DanceClassViewController(model: danceClass)
-    }
-    return CardsManager<DanceClassViewController>(scenes: scenes)
-  }()
+  private var cardsManager: CardsManager<DanceClassViewController>!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
+    cardsManager = CardsManager(scenes: scenes)
     cardsManager.dismiss = { [unowned self] in
-      self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     cardsManager.didSelect = { [unowned self] danceClass in
-      print("Current selection is \(danceClass.town)")
+        print("Current selection is \(danceClass.town)")
     }
   }
   
@@ -62,34 +58,10 @@ class ViewController: UIViewController {
 }
 ```
 
-In the above example `DanceClassViewController` should conform to `CardableScene`. As you can see `DanceClass` is the model for `DanceClassViewController`, so your `CardableScene` implementation should specify this.
+The above `DanceClassViewController` conforms to `CardableScene`.
 
-```swift
-import UIKit
-import Cards
-
-class DanceClassViewController: UIViewController, CardableScene {
-    
-    typealias Model = DanceClass
-  
-    required init(model: DanceClass) {
-      self.danceClass = model
-      super.init(nibName: nil, bundle: nil)
-    }
-  
-    var showsNavigationBar: Bool {
-      return true
-    }
-  
-    var model: DanceClass {
-      return danceClass
-    }
-
-    private let danceClass: DanceClass
-    
-    /// Implement a table view here
-}
-```
+* [CardableScene](https://github.com/rob-nash/Cards/wiki/CardableScene).
+* [DanceClassGenerator](https://github.com/rob-nash/Cards/wiki/DanceClassGenerator)
 
 ## Demo
 
