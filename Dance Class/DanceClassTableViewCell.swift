@@ -13,21 +13,21 @@ class DanceClassTableViewCell: UITableViewCell, DequeableComponentIdentifiable {
     
     @IBOutlet private var labelOne: UILabel! {
         didSet {
-            labelOne.font = FontManager.subtitle
-            labelOne.textColor = ColourManager.text
+            labelOne.font = fontA
+            labelOne.textColor = green
         }
     }
     
     @IBOutlet private var dividerView: UIView! {
         didSet {
-            dividerView.backgroundColor = ColourManager.divider
+            dividerView.backgroundColor = pink
         }
     }
   
     @IBOutlet private weak var textField: UITextField! {
       didSet {
-        textField.font = FontManager.body
-        textField.textColor = ColourManager.text
+        textField.font = fontB
+        textField.textColor = green
       }
     }
 

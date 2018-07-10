@@ -39,8 +39,8 @@ class DanceClassViewController: UIViewController, CardableScene {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Class"
-        navigationController?.navigationBar.titleTextAttributes = [.font: FontManager.navigationBarTitle, .foregroundColor: ColourManager.text]
-        view.backgroundColor = ColourManager.background
+        navigationController?.navigationBar.titleTextAttributes = [.font: fontA, .foregroundColor: green]
+        view.backgroundColor = blue
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = tableViewModel
         view.addSubview(tableView)

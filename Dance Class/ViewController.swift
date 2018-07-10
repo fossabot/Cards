@@ -17,7 +17,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = ColourManager.background
+    view.backgroundColor = blue
     let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
     cardsManager = CardsManager(scenes: scenes)
     cardsManager.dismiss = { [unowned self] in
