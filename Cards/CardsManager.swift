@@ -12,7 +12,7 @@ public class CardsManager<T>: CardViewControllerPresentationControllerDelegate w
     
   private let transitionHandler: CardViewControllerTransitionHandler
    
-  public typealias Selection = (T.Model) -> Void
+  public typealias Selection = (T.CardableSceneModel) -> Void
   public typealias DismissAction = () -> Void
   
   public var didSelect: Selection?
@@ -29,9 +29,9 @@ public class CardsManager<T>: CardViewControllerPresentationControllerDelegate w
     return controller as UIViewController
   }()
   
-  public init(scenes: [T]) {
-    self.cards = scenes.map { scene in
-      return Card<T>(scene: scene)
+  public init(scenes: [T]) throws {
+    self.cards = try scenes.map { scene in
+      return try Card<T>(scene: scene)
     }
     self.transitionHandler = CardViewControllerTransitionHandler()
     self.transitionHandler.interactionDelegate = self

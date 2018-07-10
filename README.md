@@ -17,42 +17,34 @@ A dequing menu of card-shaped view controllers.
 
 ## Usage
 
-Given a data source like the following.
-
-```swift
-class DanceClass {
-    let name: String
-    let address1: String
-    let address2: String
-    let town: String
-    let postcode: String
-}
-```
-
-
-Create an instance of `CardsManager` and keep a strong reference to it.
-
 ```swift
 import UIKit
 import Cards
 
 class ViewController: UIViewController {
-  
-  private var cardsManager: CardsManager<DanceClassViewController>!
-  
+    
+  private let cardsManager: CardsManager<DanceClassViewController> = {
+    let controllers = DanceClassGenerator.generate().map { danceClass -> DanceClassViewController in
+      let controller = DanceClassViewController()
+      controller.model = danceClass
+      return controller
+    }
+    return try! CardsManager(scenes: controllers)
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
-    cardsManager = CardsManager(scenes: scenes)
     cardsManager.dismiss = { [unowned self] in
         self.dismiss(animated: true, completion: nil)
     }
     cardsManager.didSelect = { [unowned self] danceClass in
         print("Current selection is \(danceClass.town)")
     }
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognized(_:)))
+    view.addGestureRecognizer(tapGesture)
   }
   
-  @IBAction private func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
+  @objc func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
     present(cardsManager.selectionsScene, animated: true, completion: nil)
   }
 }

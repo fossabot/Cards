@@ -8,13 +8,16 @@
 
 import UIKit
 
+private struct AssociatedKeys {
+  static var model: UInt8 = 0
+}
+
 /// https://bugs.swift.org/browse/SR-6265
 
 public protocol CardableScene: class where Self: UIViewController {
-    associatedtype Model
+    associatedtype CardableSceneModel
     var showsNavigationBar: Bool { get }
-    init(model: Model)
-    var model: Model { get }
+    var model: CardableSceneModel? { get }
 }
 
 //public extension CardableScene {
@@ -25,4 +28,23 @@ public protocol CardableScene: class where Self: UIViewController {
 //      return navigationItem.title != nil
 //    }
 //}
+
+public extension CardableScene {
+  
+  var model: CardableSceneModel? {
+    get {
+      guard let value = objc_getAssociatedObject(self, &AssociatedKeys.model) as? CardableSceneModel else {
+        return nil
+      }
+      return value
+    }
+    set {
+      objc_setAssociatedObject(self as Any, &AssociatedKeys.model, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+  }
+  
+  var showsNavigationBar: Bool {
+    return true
+  }
+}
 

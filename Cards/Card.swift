@@ -10,9 +10,18 @@ import UIKit
 
 struct Card<T> where T: CardableScene {
   
-  let scene: UINavigationController
+  enum Error: Swift.Error {
+    case modelMissing
+  }
   
-  init(scene: T) {
+  let scene: UINavigationController
+  let model: T.CardableSceneModel
+  
+  init(scene: T) throws {
+    guard scene.model != nil else {
+      throw Error.modelMissing
+    }
+    self.model = scene.model!
     let navigationController = UINavigationController(rootViewController: scene)
     navigationController.isNavigationBarHidden = (scene.showsNavigationBar == false)
     self.scene = navigationController

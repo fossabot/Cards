@@ -1,6 +1,7 @@
 import UIKit
 import Cards
 import Gradient
+import Dequable
 
 class GradientViewController: UIViewController {
   
@@ -86,8 +87,12 @@ final class HomeViewController: GradientViewController {
   }()
   
   private let cardsManager: CardsManager<DanceClassViewController> = {
-    let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
-    return CardsManager(scenes: scenes)
+    let scenes = DanceClassGenerator.generate().map { danceClass -> DanceClassViewController in
+      let controller = DanceClassViewController()
+      controller.model = danceClass
+      return controller
+    }
+    return try! CardsManager(scenes: scenes)
   }()
   
   private lazy var feedbackLabelConstraints1: [NSLayoutConstraint] = {
@@ -161,15 +166,9 @@ final class HomeViewController: GradientViewController {
   }
 }
 
-final class DanceClassViewController: UIViewController, CardableScene {
-  
-  private let tableViewModel: TableViewModel
+final class DanceClassViewController: UIViewController {
   
   private let tableView = TableView()
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
   
   override func loadView() {
     let view = UIView()
@@ -186,7 +185,7 @@ final class DanceClassViewController: UIViewController, CardableScene {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Class"
-    tableView.dataSource = tableViewModel
+    tableView.dataSource = self
     view.addSubview(tableView)
     
     tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -198,21 +197,46 @@ final class DanceClassViewController: UIViewController, CardableScene {
       tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
       ])
   }
+}
+
+extension DanceClassViewController: CardableScene {
   
-  /// CardableScene
+  typealias CardableSceneModel = DanceClass
+}
+
+extension DanceClassViewController: UITableViewDataSource {
   
-  typealias Model = DanceClass
-  
-  required init(model: Model) {
-    self.tableViewModel = TableViewModel(danceClass: model)
-    super.init(nibName: nil, bundle: nil)
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
   }
   
-  var model: DanceClass {
-    return tableViewModel.danceClass
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 6
   }
   
-  var showsNavigationBar: Bool {
-    return true
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let dequableTableView: DequeableTableView = (tableView as? DequeableTableView).require(hint: "Must conform to DequeableTableView")
+    let cell: TableViewCell = dequableTableView.dequeue(indexPath)
+    let row = indexPath.row
+    guard row < 6 else {
+      fatalError("Only expecting 6 rows")
+    }
+    guard let danceClass = model else {
+      fatalError("Model is missing")
+    }
+    if row == 0 {
+      cell.configure(withTitle: "Name", withSubtitle: danceClass.name)
+    } else if row == 1 {
+      cell.configure(withTitle: "Type", withSubtitle: danceClass.type.rawValue)
+    } else if row == 2 {
+      cell.configure(withTitle: "Address 1", withSubtitle: danceClass.address1)
+    } else if row == 3 {
+      cell.configure(withTitle: "Address 2", withSubtitle: danceClass.address2)
+    } else if row == 4 {
+      cell.configure(withTitle: "Town", withSubtitle: danceClass.town)
+    } else if row == 5 {
+      cell.configure(withTitle: "Postcode", withSubtitle: danceClass.postcode)
+    }
+    return cell
   }
 }

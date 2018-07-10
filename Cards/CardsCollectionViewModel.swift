@@ -12,7 +12,7 @@ class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UIColle
   
   private let cards: [Card<T>]
   
-  typealias Selection = (T.Model) -> Void
+  typealias Selection = (T.CardableSceneModel) -> Void
   
   var didSelect: Selection?
   
@@ -34,8 +34,7 @@ class CardsCollectionViewModel<T>: NSObject, UICollectionViewDataSource, UIColle
     let card: Card = cards[indexPath.item]
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCellID", for: indexPath) as! CardCollectionViewCell
     cell.didTap = { [unowned self] in
-      let scene = (card.scene.viewControllers.first as! T)
-      self.didSelect?(scene.model)
+      self.didSelect?(card.model)
     }
     cell.configure(withScene: card.scene)
     return cell
