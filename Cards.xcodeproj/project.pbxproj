@@ -23,7 +23,6 @@
 		5079B6AF20F3C55000E03BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B69D20F3C55000E03BE6 /* AppDelegate.swift */; };
 		5079B6B020F3C55000E03BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5079B69E20F3C55000E03BE6 /* Assets.xcassets */; };
 		5079B6B120F3C55000E03BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */; };
-		5079B6B220F3C55000E03BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A120F3C55000E03BE6 /* Main.storyboard */; };
 		5079B6B420F3C55000E03BE6 /* DanceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A420F3C55000E03BE6 /* DanceClass.swift */; };
 		5079B6B620F3C55000E03BE6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A620F3C55000E03BE6 /* TableView.swift */; };
 		5079B6B820F3C55000E03BE6 /* DanceClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */; };
@@ -77,7 +76,6 @@
 		5079B69D20F3C55000E03BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5079B69E20F3C55000E03BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5079B6A020F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5079B6A220F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5079B6A420F3C55000E03BE6 /* DanceClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClass.swift; sourceTree = "<group>"; };
 		5079B6A620F3C55000E03BE6 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanceClassTableViewCell.xib; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				5079B6AE20F3C55000E03BE6 /* ViewControllers.swift */,
 				5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */,
 				5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */,
-				5079B6A120F3C55000E03BE6 /* Main.storyboard */,
 				5079B6AB20F3C55000E03BE6 /* data.json */,
 				5079B69E20F3C55000E03BE6 /* Assets.xcassets */,
 				5079B6AD20F3C55000E03BE6 /* Info.plist */,
@@ -263,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5079B6B820F3C55000E03BE6 /* DanceClassTableViewCell.xib in Resources */,
-				5079B6B220F3C55000E03BE6 /* Main.storyboard in Resources */,
 				5079B6B020F3C55000E03BE6 /* Assets.xcassets in Resources */,
 				5079B6BB20F3C55000E03BE6 /* data.json in Resources */,
 				5079B6B120F3C55000E03BE6 /* LaunchScreen.storyboard in Resources */,
@@ -326,14 +322,6 @@
 				5079B6A020F3C55000E03BE6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		5079B6A120F3C55000E03BE6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5079B6A220F3C55000E03BE6 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

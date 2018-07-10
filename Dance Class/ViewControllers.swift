@@ -19,9 +19,11 @@ final class ViewController: UIViewController {
         self.currentSelectionLabel.text = "Current selection is \(danceClass.town)"
         self.dismiss(animated: true, completion: nil)
     }
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognized(_:)))
+    view.addGestureRecognizer(tapGesture)
   }
   
-  @IBAction private func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
+  @objc func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
     present(cardsManager.selectionsScene, animated: true, completion: nil)
   }
 }
