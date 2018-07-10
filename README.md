@@ -9,6 +9,15 @@
     <a href="https://twitter.com/nashytitz">
         <img src="https://img.shields.io/badge/contact-@nashytitz-blue.svg?style=flat" alt="Twitter: @nashytitz" />
     </a>
+    <a href="https://codebeat.co/projects/github-com-rob-nash-cards-master">
+        <img alt="codebeat badge" src="https://codebeat.co/badges/a474c194-4584-41d2-9931-071ea43428d9" />
+    </a>
+    <a href="https://swift.org">
+        <img src="https://img.shields.io/badge/swift-4.1-green.svg?style=flat" alt="Swift: 4.1" />
+    </a>
+    <a href="https://developer.apple.com">
+        <img src="https://img.shields.io/badge/xcode-9+-green.svg?style=flat" alt="Xcode: 9+" />
+    </a>
 </p>
 
 A dequing menu of card-shaped view controllers.
