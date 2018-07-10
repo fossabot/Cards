@@ -1,30 +1,53 @@
 import UIKit
 import Cards
 
-final class ViewController: UIViewController {
+final class HomeViewController: UIViewController {
   
-  @IBOutlet private var currentSelectionLabel: UILabel!
+  private let feedbackLabel: UILabel = {
+    let view = UILabel()
+    view.textColor = .white
+    view.textAlignment = .center
+    view.font = fontB
+    view.text = "No Selection"
+    return view
+  }()
   
-  private var cardsManager: CardsManager<DanceClassViewController>!
+  private let cardsManager: CardsManager<DanceClassViewController> = {
+    let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
+    return CardsManager(scenes: scenes)
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = blue
-    let scenes = DanceClassGenerator.generate().map(DanceClassViewController.init)
-    cardsManager = CardsManager(scenes: scenes)
+    view.addSubview(feedbackLabel)
+    
+    feedbackLabel.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+      feedbackLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      feedbackLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+      feedbackLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+      ])
+    
     cardsManager.dismiss = { [unowned self] in
-        self.dismiss(animated: true, completion: nil)
+      self.dismiss(animated: true, completion: nil)
     }
     cardsManager.didSelect = { [unowned self] danceClass in
-        self.currentSelectionLabel.text = "Current selection is \(danceClass.town)"
-        self.dismiss(animated: true, completion: nil)
+      self.feedbackLabel.text = "Current selection is \(danceClass.town)"
+      self.dismiss(animated: true, completion: nil)
     }
+    
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognized(_:)))
     view.addGestureRecognizer(tapGesture)
   }
   
   @objc func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
     present(cardsManager.selectionsScene, animated: true, completion: nil)
+  }
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
   }
 }
 
@@ -38,11 +61,21 @@ final class DanceClassViewController: UIViewController, CardableScene {
     fatalError("init(coder:) has not been implemented")
   }
   
+  override func loadView() {
+    let view = UIView()
+    view.backgroundColor = blue
+    self.view = view
+  }
+  
+  override var navigationController: UINavigationController? {
+    let navigationController = super.navigationController
+    navigationController?.navigationBar.titleTextAttributes = [.font: fontA, .foregroundColor: green]
+    return navigationController
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = "Class"
-    navigationController?.navigationBar.titleTextAttributes = [.font: fontA, .foregroundColor: green]
-    view.backgroundColor = blue
+    title = "Class"
     tableView.dataSource = tableViewModel
     view.addSubview(tableView)
     

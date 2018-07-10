@@ -68,21 +68,22 @@ final class DanceClassTableViewModel: NSObject, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let dequableTableView: DequeableTableView = (tableView as? DequeableTableView).require(hint: "Must conform to DequeableTableView")
     let cell: DanceClassTableViewCell = dequableTableView.dequeue(indexPath)
-    switch indexPath.row {
-    case 0:
+    let row = indexPath.row
+    guard row < 6 else {
+      fatalError("Only expecting 6 rows")
+    }
+    if row == 0 {
       cell.configure(withTitle: "Name", withSubtitle: danceClass.name)
-    case 1:
+    } else if row == 1 {
       cell.configure(withTitle: "Type", withSubtitle: danceClass.type.rawValue)
-    case 2:
+    } else if row == 2 {
       cell.configure(withTitle: "Address 1", withSubtitle: danceClass.address1)
-    case 3:
+    } else if row == 3 {
       cell.configure(withTitle: "Address 2", withSubtitle: danceClass.address2)
-    case 4:
+    } else if row == 4 {
       cell.configure(withTitle: "Town", withSubtitle: danceClass.town)
-    case 5:
+    } else if row == 5 {
       cell.configure(withTitle: "Postcode", withSubtitle: danceClass.postcode)
-    default:
-      cell.configure(withTitle: "<Unexpected>", withSubtitle: "No value")
     }
     return cell
   }

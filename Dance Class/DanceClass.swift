@@ -1,6 +1,6 @@
 import Foundation
 
-class DanceClass: Decodable {
+final class DanceClass: Decodable {
   
   enum ClassType: String {
     case open = "Open"
@@ -42,7 +42,7 @@ struct DanceClassGenerator {
     return decodeClasses()
   }
   
-  static func decodeClasses() -> [DanceClass] {
+  private static func decodeClasses() -> [DanceClass] {
     let url: URL = Bundle.main.url(forResource: "data", withExtension: "json")!
     let data = try! String(contentsOf: url).data(using: .utf8)!
     return try! JSONDecoder().decode([DanceClass].self, from: data)
