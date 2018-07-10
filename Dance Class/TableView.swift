@@ -2,12 +2,12 @@ import UIKit
 import Dequable
 import Require
 
-final class DanceClassTableView: UITableView, DequeableTableView {
+final class TableView: UITableView, DequeableTableView {
   
   init() {
     super.init(frame: .zero, style: .plain)
     separatorStyle = .none
-    register(cellType: DanceClassTableViewCell.self, hasXib: true)
+    register(cellType: TableViewCell.self, hasXib: true)
     backgroundColor = .clear
   }
   
@@ -16,7 +16,7 @@ final class DanceClassTableView: UITableView, DequeableTableView {
   }
 }
 
-final class DanceClassTableViewCell: UITableViewCell, DequeableComponentIdentifiable {
+final class TableViewCell: UITableViewCell, DequeableComponentIdentifiable {
   
   @IBOutlet private var labelOne: UILabel! {
     didSet {
@@ -49,7 +49,7 @@ final class DanceClassTableViewCell: UITableViewCell, DequeableComponentIdentifi
   }
 }
 
-final class DanceClassTableViewModel: NSObject, UITableViewDataSource {
+final class TableViewModel: NSObject, UITableViewDataSource {
   
   let danceClass: DanceClass
   
@@ -67,7 +67,7 @@ final class DanceClassTableViewModel: NSObject, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let dequableTableView: DequeableTableView = (tableView as? DequeableTableView).require(hint: "Must conform to DequeableTableView")
-    let cell: DanceClassTableViewCell = dequableTableView.dequeue(indexPath)
+    let cell: TableViewCell = dequableTableView.dequeue(indexPath)
     let row = indexPath.row
     guard row < 6 else {
       fatalError("Only expecting 6 rows")

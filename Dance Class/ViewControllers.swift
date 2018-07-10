@@ -53,9 +53,9 @@ final class HomeViewController: UIViewController {
 
 final class DanceClassViewController: UIViewController, CardableScene {
   
-  private let tableViewModel: DanceClassTableViewModel
+  private let tableViewModel: TableViewModel
   
-  private let tableView = DanceClassTableView()
+  private let tableView = TableView()
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -94,7 +94,7 @@ final class DanceClassViewController: UIViewController, CardableScene {
   typealias Model = DanceClass
   
   required init(model: Model) {
-    self.tableViewModel = DanceClassTableViewModel(danceClass: model)
+    self.tableViewModel = TableViewModel(danceClass: model)
     super.init(nibName: nil, bundle: nil)
   }
   
