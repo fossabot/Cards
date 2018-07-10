@@ -1,7 +1,71 @@
 import UIKit
 import Cards
+import Gradient
 
-final class HomeViewController: UIViewController {
+class GradientViewController: UIViewController {
+  
+  var color1: CGColor {
+    fatalError("Must override")
+  }
+  
+  var color2: CGColor {
+    fatalError("Must override")
+  }
+  
+  var color3: CGColor {
+    fatalError("Must override")
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    var gradientView: GradientView!
+    var colors: [CGColor]!
+    var coordinates: Coordinates
+    
+    colors = [color1, color2]
+    coordinates = GradientPoint.leftRight.coordinates
+    gradientView = GradientView(colors: colors, coordinates: coordinates)
+    view.addSubview(gradientView)
+    
+    gradientView.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+      gradientView.topAnchor.constraint(equalTo: view.topAnchor),
+      gradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      gradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      gradientView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
+    
+    colors = [color3, UIColor.clear.cgColor]
+    coordinates = Coordinates(x: CGPoint(x: 0.2, y: 1), y: CGPoint(x: 0.7, y: 0))
+    gradientView = GradientView(colors: colors, coordinates: coordinates)
+    view.addSubview(gradientView)
+    
+    gradientView.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+      gradientView.topAnchor.constraint(equalTo: view.topAnchor),
+      gradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      gradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      gradientView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
+  }
+}
+
+final class HomeViewController: GradientViewController {
+  
+  override var color1: CGColor {
+    return #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor
+  }
+  
+  override var color2: CGColor {
+    return #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).cgColor
+  }
+  
+  override var color3: CGColor {
+    return UIColor.purple.cgColor
+  }
   
   private let feedbackLabel: UILabel = {
     let view = UILabel()

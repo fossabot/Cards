@@ -12,6 +12,8 @@
 		50219D841FE3C8F60042D847 /* CardViewControllerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D831FE3C8F60042D847 /* CardViewControllerPresentationController.swift */; };
 		50219D861FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D851FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift */; };
 		50219D881FE3C9850042D847 /* CardViewControllerTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219D871FE3C9850042D847 /* CardViewControllerTransitionHandler.swift */; };
+		502D83C820F49D320020BCEA /* Gradient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502D83C720F49D320020BCEA /* Gradient.framework */; };
+		502D83C920F49D320020BCEA /* Gradient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 502D83C720F49D320020BCEA /* Gradient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50492FA720F3C71500D324F6 /* Dequable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA520F3C71500D324F6 /* Dequable.framework */; };
 		50492FA820F3C71500D324F6 /* Dequable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA520F3C71500D324F6 /* Dequable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50492FA920F3C71500D324F6 /* Require.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50492FA620F3C71500D324F6 /* Require.framework */; };
@@ -51,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				502D83C920F49D320020BCEA /* Gradient.framework in Embed Frameworks */,
 				50F0DFA820F3C57700C2C8C0 /* Cards.framework in Embed Frameworks */,
 				50492FA820F3C71500D324F6 /* Dequable.framework in Embed Frameworks */,
 				50492FAA20F3C71500D324F6 /* Require.framework in Embed Frameworks */,
@@ -66,6 +69,7 @@
 		50219D831FE3C8F60042D847 /* CardViewControllerPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerPresentationController.swift; sourceTree = "<group>"; };
 		50219D851FE3C9590042D847 /* CardViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		50219D871FE3C9850042D847 /* CardViewControllerTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitionHandler.swift; sourceTree = "<group>"; };
+		502D83C720F49D320020BCEA /* Gradient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gradient.framework; path = Carthage/Build/iOS/Gradient.framework; sourceTree = "<group>"; };
 		50492FA520F3C71500D324F6 /* Dequable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dequable.framework; path = Carthage/Build/iOS/Dequable.framework; sourceTree = "<group>"; };
 		50492FA620F3C71500D324F6 /* Require.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Require.framework; path = Carthage/Build/iOS/Require.framework; sourceTree = "<group>"; };
 		50550AE21FEA339000675714 /* CardableScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardableScene.swift; path = ../../Cards/Cards/CardableScene.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502D83C820F49D320020BCEA /* Gradient.framework in Frameworks */,
 				50F0DFA720F3C57700C2C8C0 /* Cards.framework in Frameworks */,
 				50492FA720F3C71500D324F6 /* Dequable.framework in Frameworks */,
 				50492FA920F3C71500D324F6 /* Require.framework in Frameworks */,
@@ -128,6 +133,7 @@
 		50FE209A1FE28D39001FBF11 = {
 			isa = PBXGroup;
 			children = (
+				502D83C720F49D320020BCEA /* Gradient.framework */,
 				50492FA520F3C71500D324F6 /* Dequable.framework */,
 				50492FA620F3C71500D324F6 /* Require.framework */,
 				50FE20A61FE28D39001FBF11 /* Cards */,
