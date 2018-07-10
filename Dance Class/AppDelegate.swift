@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Dance Class
-//
-//  Created by Robert Nash on 14/12/2017.
-//  Copyright © 2017 Robert Nash. All rights reserved.
-//
-
 import UIKit
 
 let red = #colorLiteral(red: 0.8705882353, green: 0.4196078431, blue: 0.2823529412, alpha: 1)

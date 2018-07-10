@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Dance Class
-//
-//  Created by Robert Nash on 14/12/2017.
-//  Copyright © 2017 Robert Nash. All rights reserved.
-//
- 
 import UIKit
 import Cards
 

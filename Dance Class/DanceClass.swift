@@ -1,11 +1,3 @@
-//
-//  DanceClass.swift
-//  DanceClass
-//
-//  Created by Robert Nash on 20/12/2017.
-//  Copyright © 2017 Robert Nash. All rights reserved.
-//
-
 import Foundation
 
 class DanceClass: Decodable {
