@@ -137,8 +137,8 @@
 				50492FA520F3C71500D324F6 /* Dequable.framework */,
 				50492FA620F3C71500D324F6 /* Require.framework */,
 				50FE20A61FE28D39001FBF11 /* Cards */,
-				50FE20A51FE28D39001FBF11 /* Products */,
 				5079B69C20F3C55000E03BE6 /* Dance Class */,
+				50FE20A51FE28D39001FBF11 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
