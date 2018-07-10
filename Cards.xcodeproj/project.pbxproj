@@ -25,14 +25,10 @@
 		5079B6B120F3C55000E03BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */; };
 		5079B6B220F3C55000E03BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A120F3C55000E03BE6 /* Main.storyboard */; };
 		5079B6B420F3C55000E03BE6 /* DanceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A420F3C55000E03BE6 /* DanceClass.swift */; };
-		5079B6B520F3C55000E03BE6 /* DanceClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */; };
-		5079B6B620F3C55000E03BE6 /* DanceClassTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */; };
-		5079B6B720F3C55000E03BE6 /* DanceClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */; };
+		5079B6B620F3C55000E03BE6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A620F3C55000E03BE6 /* TableView.swift */; };
 		5079B6B820F3C55000E03BE6 /* DanceClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */; };
-		5079B6B920F3C55000E03BE6 /* DanceClassTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */; };
-		5079B6BA20F3C55000E03BE6 /* DanceClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */; };
 		5079B6BB20F3C55000E03BE6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5079B6AB20F3C55000E03BE6 /* data.json */; };
-		5079B6BE20F3C55000E03BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AE20F3C55000E03BE6 /* ViewController.swift */; };
+		5079B6BE20F3C55000E03BE6 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079B6AE20F3C55000E03BE6 /* ViewControllers.swift */; };
 		50F0DFA720F3C57700C2C8C0 /* Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE20A41FE28D39001FBF11 /* Cards.framework */; };
 		50F0DFA820F3C57700C2C8C0 /* Cards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE20A41FE28D39001FBF11 /* Cards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50FE20ED1FE29B25001FBF11 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE20EC1FE29B25001FBF11 /* CardsManager.swift */; };
@@ -83,15 +79,11 @@
 		5079B6A020F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5079B6A220F3C55000E03BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5079B6A420F3C55000E03BE6 /* DanceClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClass.swift; sourceTree = "<group>"; };
-		5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassGenerator.swift; sourceTree = "<group>"; };
-		5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableView.swift; sourceTree = "<group>"; };
-		5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableViewCell.swift; sourceTree = "<group>"; };
+		5079B6A620F3C55000E03BE6 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanceClassTableViewCell.xib; sourceTree = "<group>"; };
-		5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassTableViewModel.swift; sourceTree = "<group>"; };
-		5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanceClassViewController.swift; sourceTree = "<group>"; };
 		5079B6AB20F3C55000E03BE6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		5079B6AD20F3C55000E03BE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5079B6AE20F3C55000E03BE6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5079B6AE20F3C55000E03BE6 /* ViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		50FE20A41FE28D39001FBF11 /* Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FE20A81FE28D3A001FBF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50FE20EC1FE29B25001FBF11 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
@@ -123,19 +115,15 @@
 			isa = PBXGroup;
 			children = (
 				5079B69D20F3C55000E03BE6 /* AppDelegate.swift */,
-				5079B69E20F3C55000E03BE6 /* Assets.xcassets */,
+				5079B6A420F3C55000E03BE6 /* DanceClass.swift */,
+				5079B6A620F3C55000E03BE6 /* TableView.swift */,
+				5079B6AE20F3C55000E03BE6 /* ViewControllers.swift */,
+				5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */,
 				5079B69F20F3C55000E03BE6 /* LaunchScreen.storyboard */,
 				5079B6A120F3C55000E03BE6 /* Main.storyboard */,
-				5079B6A420F3C55000E03BE6 /* DanceClass.swift */,
-				5079B6A520F3C55000E03BE6 /* DanceClassGenerator.swift */,
-				5079B6A620F3C55000E03BE6 /* DanceClassTableView.swift */,
-				5079B6A720F3C55000E03BE6 /* DanceClassTableViewCell.swift */,
-				5079B6A820F3C55000E03BE6 /* DanceClassTableViewCell.xib */,
-				5079B6A920F3C55000E03BE6 /* DanceClassTableViewModel.swift */,
-				5079B6AA20F3C55000E03BE6 /* DanceClassViewController.swift */,
 				5079B6AB20F3C55000E03BE6 /* data.json */,
+				5079B69E20F3C55000E03BE6 /* Assets.xcassets */,
 				5079B6AD20F3C55000E03BE6 /* Info.plist */,
-				5079B6AE20F3C55000E03BE6 /* ViewController.swift */,
 			);
 			path = "Dance Class";
 			sourceTree = "<group>";
@@ -296,14 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5079B6BE20F3C55000E03BE6 /* ViewController.swift in Sources */,
-				5079B6B520F3C55000E03BE6 /* DanceClassGenerator.swift in Sources */,
-				5079B6BA20F3C55000E03BE6 /* DanceClassViewController.swift in Sources */,
-				5079B6B620F3C55000E03BE6 /* DanceClassTableView.swift in Sources */,
-				5079B6B920F3C55000E03BE6 /* DanceClassTableViewModel.swift in Sources */,
+				5079B6BE20F3C55000E03BE6 /* ViewControllers.swift in Sources */,
+				5079B6B620F3C55000E03BE6 /* TableView.swift in Sources */,
 				5079B6AF20F3C55000E03BE6 /* AppDelegate.swift in Sources */,
 				5079B6B420F3C55000E03BE6 /* DanceClass.swift in Sources */,
-				5079B6B720F3C55000E03BE6 /* DanceClassTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

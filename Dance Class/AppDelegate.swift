@@ -19,5 +19,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().barTintColor = red
     return true
   }
-
+  
 }
