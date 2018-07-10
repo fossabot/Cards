@@ -22,7 +22,7 @@
 
 A dequing menu of card-shaped view controllers.
 
-<p align="left"><img src="http://i.giphy.com/3ohc18V0x9lylBzwsw.gif" width="259" height="460"/></p>
+![Image](https://user-images.githubusercontent.com/14126999/42500693-e001cb7e-8429-11e8-8a23-380816399a6f.png)
 
 ## Usage
 
@@ -67,6 +67,8 @@ The above `DanceClassViewController` conforms to `CardableScene`.
 ## Demo
 
 Run the [Carthage](https://github.com/Carthage/Carthage) command `carthage bootstrap`. Then Run the scheme `DanceClass`.
+
+<p align="left"><img src="http://i.giphy.com/3ohc18V0x9lylBzwsw.gif" width="259" height="460"/></p>
 
 ## Installing
 
