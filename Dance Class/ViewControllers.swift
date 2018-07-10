@@ -81,6 +81,22 @@ final class HomeViewController: GradientViewController {
     return CardsManager(scenes: scenes)
   }()
   
+  private lazy var feedbackLabelConstraints1: [NSLayoutConstraint] = {
+    return [
+      feedbackLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      feedbackLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+      feedbackLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+    ]
+  }()
+  
+  private lazy var feedbackLabelConstraints2: [NSLayoutConstraint] = {
+    return [
+      feedbackLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+      feedbackLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+      feedbackLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+    ]
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = blue
@@ -88,11 +104,12 @@ final class HomeViewController: GradientViewController {
     
     feedbackLabel.translatesAutoresizingMaskIntoConstraints = false
     
-    NSLayoutConstraint.activate([
-      feedbackLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-      feedbackLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-      feedbackLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
-      ])
+    if view.traitCollection.verticalSizeClass == .compact ||
+      view.traitCollection.verticalSizeClass == .unspecified {
+      NSLayoutConstraint.activate(feedbackLabelConstraints2)
+    } else {
+      NSLayoutConstraint.activate(feedbackLabelConstraints1)
+    }
     
     cardsManager.dismiss = { [unowned self] in
       self.dismiss(animated: true, completion: nil)
@@ -112,6 +129,17 @@ final class HomeViewController: GradientViewController {
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
+  }
+  
+  override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.willTransition(to: newCollection, with: coordinator)
+    if newCollection.verticalSizeClass == .compact {
+      NSLayoutConstraint.deactivate(feedbackLabelConstraints1)
+      NSLayoutConstraint.activate(feedbackLabelConstraints2)
+    } else {
+      NSLayoutConstraint.deactivate(feedbackLabelConstraints2)
+      NSLayoutConstraint.activate(feedbackLabelConstraints1)
+    }
   }
 }
 
