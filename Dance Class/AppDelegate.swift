@@ -8,6 +8,7 @@ let pink = #colorLiteral(red: 0.9568627451, green: 0.7254901961, blue: 0.6980392
 
 let fontA = UIFont(name: "AvenirNext-DemiBold", size: UIDevice.current.userInterfaceIdiom == .pad ? 40.0 : 20.0)!
 let fontB = UIFont(name: "AvenirNext-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 40.0 : 20.0)!
+let fontC = UIFont(name: "AvenirNext-DemiBold", size: UIDevice.current.userInterfaceIdiom == .pad ? 80.0 : 40.0)!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

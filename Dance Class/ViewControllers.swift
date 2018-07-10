@@ -67,11 +67,20 @@ final class HomeViewController: GradientViewController {
     return UIColor.purple.cgColor
   }
   
+  private let backgroundLabel: UILabel = {
+    let view = UILabel()
+    view.textColor = .white
+    view.textAlignment = .center
+    view.font = fontC
+    view.text = "Tap"
+    return view
+  }()
+  
   private let feedbackLabel: UILabel = {
     let view = UILabel()
     view.textColor = .white
     view.textAlignment = .center
-    view.font = fontB
+    view.font = fontA
     view.text = "No Selection"
     return view
   }()
@@ -101,8 +110,10 @@ final class HomeViewController: GradientViewController {
     super.viewDidLoad()
     view.backgroundColor = blue
     view.addSubview(feedbackLabel)
+    view.addSubview(backgroundLabel)
     
     feedbackLabel.translatesAutoresizingMaskIntoConstraints = false
+    backgroundLabel.translatesAutoresizingMaskIntoConstraints = false
     
     if view.traitCollection.verticalSizeClass == .compact ||
       view.traitCollection.verticalSizeClass == .unspecified {
@@ -110,6 +121,13 @@ final class HomeViewController: GradientViewController {
     } else {
       NSLayoutConstraint.activate(feedbackLabelConstraints1)
     }
+    
+    NSLayoutConstraint.activate([
+      backgroundLabel.topAnchor.constraint(equalTo: view.topAnchor),
+      backgroundLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      backgroundLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      backgroundLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
     
     cardsManager.dismiss = { [unowned self] in
       self.dismiss(animated: true, completion: nil)
