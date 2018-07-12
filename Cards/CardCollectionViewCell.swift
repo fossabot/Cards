@@ -38,7 +38,7 @@ class CardCollectionViewCell: UICollectionViewCell {
   
   func configure(withScene scene: UINavigationController) {
     addSubview(scene.view)
-    bringSubview(toFront: blockerView)
+    bringSubviewToFront(blockerView)
     if let scrollView = scrollView(on: scene.viewControllers.first!.view) {
       tapGesture.require(toFail: scrollView.panGestureRecognizer)
       blockerView.addGestureRecognizer(scrollView.panGestureRecognizer)

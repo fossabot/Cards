@@ -14,7 +14,7 @@ class CardsCollectionView: UICollectionView {
     super.init(frame: .zero, collectionViewLayout: CardsCollectionViewLayout())
     translatesAutoresizingMaskIntoConstraints = false
     clipsToBounds = false
-    decelerationRate = UIScrollViewDecelerationRateFast
+    decelerationRate = UIScrollView.DecelerationRate.fast
     backgroundColor = .clear
     showsVerticalScrollIndicator = false
     showsHorizontalScrollIndicator = false
