@@ -6,17 +6,14 @@
     <a href="https://travis-ci.org/rob-nash/Cards">
         <img src="https://travis-ci.org/rob-nash/Cards.svg?branch=master" alt="Build" />
     </a>
-    <a href="https://twitter.com/nashytitz">
-        <img src="https://img.shields.io/badge/contact-@nashytitz-blue.svg?style=flat" alt="Twitter: @nashytitz" />
+    <a href="https://img.shields.io/badge/carthage-compatible-brightgreen.svg">
+        <img src="https://img.shields.io/badge/carthage-compatible-brightgreen.svg" alt="Carthage"/>
     </a>
     <a href="https://codebeat.co/projects/github-com-rob-nash-cards-master">
         <img alt="codebeat badge" src="https://codebeat.co/badges/a474c194-4584-41d2-9931-071ea43428d9" />
     </a>
-    <a href="https://swift.org">
-        <img src="https://img.shields.io/badge/swift-4.1-green.svg?style=flat" alt="Swift: 4.1" />
-    </a>
-    <a href="https://developer.apple.com">
-        <img src="https://img.shields.io/badge/xcode-9+-green.svg?style=flat" alt="Xcode: 9+" />
+    <a href="https://twitter.com/nashytitz">
+        <img src="https://img.shields.io/badge/contact-@nashytitz-blue.svg?style=flat" alt="Twitter: @nashytitz" />
     </a>
 </p>
 
