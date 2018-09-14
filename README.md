@@ -9,6 +9,7 @@
     <a href="https://img.shields.io/badge/carthage-compatible-brightgreen.svg">
         <img src="https://img.shields.io/badge/carthage-compatible-brightgreen.svg" alt="Carthage"/>
     </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Frob-nash%2FCards?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Frob-nash%2FCards.svg?type=shield"/></a>
     <a href="https://codebeat.co/projects/github-com-rob-nash-cards-master">
         <img alt="codebeat badge" src="https://codebeat.co/badges/a474c194-4584-41d2-9931-071ea43428d9" />
     </a>
@@ -74,3 +75,7 @@ For the latest release, select the [release](https://github.com/rob-nash/cards/r
 ### Carthage:
 
 Add `github "rob-nash/cards"` to your `Cartfile`.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frob-nash%2FCards.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frob-nash%2FCards?ref=badge_large)
